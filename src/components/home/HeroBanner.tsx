@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Slide, Toolbar, Typography } from "@mui/material";
+import { Box, Container, Slide, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import homeBannerImage from "@/assets/images/home-banner.jpg";
@@ -26,7 +26,6 @@ function HeroBanner() {
         fill
         style={{ objectFit: "cover", zIndex: -1 }}
       />
-      <Toolbar />
       <Box sx={{ position: "absolute", top: "25%", right: "5%", left: "5%" }}>
         <Slide
           direction="right"
