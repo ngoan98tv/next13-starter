@@ -21,9 +21,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <ResponsiveAppBar />
-        <AppProviders>{children}</AppProviders>
-        <MainFooter />
+        <AppProviders>
+          <ResponsiveAppBar />
+          {children}
+          <MainFooter />
+        </AppProviders>
       </body>
     </html>
   );
