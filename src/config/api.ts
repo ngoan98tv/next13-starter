@@ -1,6 +1,6 @@
-import { ListOptions } from "./types/shared";
-import { User } from "./types/user";
-import { buildQueryString } from "./utils/query";
+import { ListOptions } from "@/types/shared";
+import { User } from "@/types/user";
+import { buildQueryString } from "@/utils/query";
 
 // prettier-ignore
 export const apiPath = {

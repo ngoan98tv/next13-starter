@@ -3,7 +3,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import { EmotionCacheProvider } from "./EmotionCacheProvider";
-import { theme } from "@/theme";
+import { theme } from "@/config/theme";
 import SWRProvider from "./SWRProvider";
 
 type Props = {

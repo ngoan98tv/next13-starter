@@ -1,7 +1,7 @@
 import "client-only";
 import { User, UserUpdateInput } from "@/types/user";
 import useMutation from "../useMutation";
-import { apiPath } from "@/api";
+import { apiPath } from "@/config/api";
 
 function useUserUpdate(id: string) {
   return useMutation<User, UserUpdateInput>(apiPath.userDetail(id), {

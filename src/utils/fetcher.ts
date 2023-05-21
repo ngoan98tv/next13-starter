@@ -1,4 +1,4 @@
-import { appConfig } from "@/config";
+import { appConfig } from "@/config/env";
 import { FetchArgs, FetchOptions } from "@/types/shared";
 import { buildQueryString } from "@/utils/query";
 

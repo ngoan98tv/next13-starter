@@ -1,4 +1,4 @@
-import { apiPath } from "@/api";
+import { apiPath } from "@/config/api";
 import { fetcher } from "@/utils/fetcher";
 import { ListOptions, ListResponse } from "@/types/shared";
 import { User, UserCreateInput, UserUpdateInput } from "@/types/user";

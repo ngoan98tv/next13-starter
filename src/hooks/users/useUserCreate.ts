@@ -1,7 +1,7 @@
 import "client-only";
 import useMutation from "../useMutation";
 import { User, UserCreateInput } from "@/types/user";
-import { apiPath } from "@/api";
+import { apiPath } from "@/config/api";
 
 function useUserCreate() {
   return useMutation<User, UserCreateInput>(apiPath.userList(), {

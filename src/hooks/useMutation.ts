@@ -1,5 +1,5 @@
 import "client-only";
-import { fetcher } from "@/data/fetcher";
+import { fetcher } from "@/utils/fetcher";
 import { ErrorResponse, FetchOptions } from "@/types/shared";
 import useSWRMutation from "swr/mutation";
 
