@@ -1,3 +1,4 @@
 {
-  "auto-close-tag.disableOnLanguage": ["javascript", "typescript"]
+  "auto-close-tag.disableOnLanguage": ["javascript", "typescript"],
+  "cSpell.words": ["unoptimized"]
 }

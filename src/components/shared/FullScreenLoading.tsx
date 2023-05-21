@@ -4,7 +4,7 @@ import React from "react";
 
 type FullScreenLoadingProps = {
   open: boolean;
-  onClose: () => void;
+  onClose?: () => void;
 };
 
 function FullScreenLoading({ open, onClose }: FullScreenLoadingProps) {

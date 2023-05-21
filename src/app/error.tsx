@@ -1,30 +1,41 @@
-"use client"; // Error components must be Client Components
+"use client";
 
-import { useEffect } from "react";
+import { Alert, Button, Container, Typography } from "@mui/material";
 
-export default function Error({
-  error,
-  reset,
-}: {
+type Props = {
   error: Error;
   reset: () => void;
-}) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error);
-  }, [error]);
+};
 
+export default function Error({ error, reset }: Props) {
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
+    <Container maxWidth="xl">
+      <Typography
+        variant="h4"
+        lineHeight={2}
+        color={"error"}
+        sx={{
+          my: 2,
+          fontWeight: 700,
+        }}
+      >
+        Error:
+      </Typography>
+      <Alert
+        variant="standard"
+        severity="error"
+        sx={{
+          mb: 5,
+        }}
+      >
+        {error.message}
+      </Alert>
+      <Button
+        variant="outlined"
+        onClick={() => reset()}
       >
         Try again
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 }

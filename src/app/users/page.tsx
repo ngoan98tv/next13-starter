@@ -1,7 +1,12 @@
+import UserList from "@/components/user/UserList";
 import React from "react";
 
-function UserPage() {
-  return <div>UserPage</div>;
+async function UserPage() {
+  return (
+    <>
+      <UserList />
+    </>
+  );
 }
 
 export default UserPage;
