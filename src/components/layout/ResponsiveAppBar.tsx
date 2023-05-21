@@ -14,9 +14,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import NextLink from "next/link";
+import { mainMenu, userMenu } from "@/config/navigation";
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -93,13 +92,17 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={handleCloseNavMenu}
+              {mainMenu.map(({ label, path }) => (
+                <NextLink
+                  href={path}
+                  legacyBehavior
+                  passHref
+                  key={path}
                 >
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                  <MenuItem>
+                    <Typography textAlign="center">{label}</Typography>
+                  </MenuItem>
+                </NextLink>
               ))}
             </Menu>
           </Box>
@@ -123,14 +126,17 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+            {mainMenu.map(({ label, path }) => (
+              <NextLink
+                href={path}
+                legacyBehavior
+                passHref
+                key={path}
               >
-                {page}
-              </Button>
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  {label}
+                </Button>
+              </NextLink>
             ))}
           </Box>
 
@@ -142,7 +148,7 @@ function ResponsiveAppBar() {
               >
                 <Avatar
                   alt="Remy Sharp"
-                  src="/static/images/avatar/2.jpg"
+                  // src="/static/images/avatar/2.jpg"
                 />
               </IconButton>
             </Tooltip>
@@ -162,13 +168,17 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem
-                  key={setting}
-                  onClick={handleCloseUserMenu}
+              {userMenu.map(({ label, path }) => (
+                <NextLink
+                  href={path}
+                  legacyBehavior
+                  passHref
+                  key={path}
                 >
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                  <MenuItem>
+                    <Typography textAlign="center">{label}</Typography>
+                  </MenuItem>
+                </NextLink>
               ))}
             </Menu>
           </Box>
