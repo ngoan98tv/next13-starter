@@ -1,3 +1,5 @@
+import MainFooter from "@/components/layout/MainFooter";
+import ResponsiveAppBar from "@/components/layout/ResponsiveAppBar";
 import AppProviders from "@/providers";
 import { Roboto } from "next/font/google";
 
@@ -19,7 +21,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <ResponsiveAppBar />
         <AppProviders>{children}</AppProviders>
+        <MainFooter />
       </body>
     </html>
   );
